@@ -79,21 +79,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/person2"
         android:layout_margin="16dp"
-        android:textSize="24sp"
         android:foregroundGravity="center"
         android:gravity="center"
         android:text="@string/calculate"
-        android:textColor="@color/colorPrimaryDark" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
 
     <TextView
+        android:id="@+id/display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/amount1more"
+        android:layout_below="@+id/calculate"
         android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
         android:gravity="center"
         android:maxLines="2"
-        android:layout_below="@+id/calculate"
+        android:text="@string/amount1more"
         android:textColor="@color/colorBrown"
         android:textSize="24sp" />
 </RelativeLayout>
