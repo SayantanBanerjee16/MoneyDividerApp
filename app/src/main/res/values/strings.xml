@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">MoneyDividerApp</string>
+    <string name="app_name">Money Divider App</string>
+    <string name="person1">Enter Person 1 amount paid :</string>
+    <string name="person2">Enter Person 2 amount paid :</string>
+    <string name="calculate">Calculate</string>
+    <string name="amount1more">Person 1 pays Person 2 an amount :</string>
+    <string name="amount2more">Enter Person 2 pays Person 2 an amount :</string>
+    <string name="amountEqual">Both amount are equal</string>
 </resources>
