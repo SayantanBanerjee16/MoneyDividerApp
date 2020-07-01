@@ -1,100 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="@string/app_name"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="36sp" />
+    <data>
 
-    <LinearLayout
-        android:id="@+id/person1"
+        <variable
+            name="viewModel"
+            type="com.sayantanbanerjee.moneydividerapp.MainActivityViewModel" />
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/heading"
-        android:layout_margin="16dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/person1"
-            android:textColor="@color/colorRed"
-            android:textSize="20sp" />
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="36sp" />
 
-        <EditText
-            android:id="@+id/person1amount"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/person1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:autofillHints="1234"
-            android:ems="10"
-            android:inputType="number" />
+            android:layout_below="@+id/heading"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/person1"
+                android:textColor="@color/colorRed"
+                android:textSize="20sp" />
 
-    <LinearLayout
-        android:id="@+id/person2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/person1"
-        android:layout_margin="16dp"
-        android:orientation="horizontal">
+            <EditText
+                android:id="@+id/person1amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:autofillHints="1234"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@{viewModel.amountPerson1}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/person2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/person1"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/person2"
+                android:textColor="@color/colorRed"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/person2amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:autofillHints="1234"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@{viewModel.amountPerson2}"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/person2"
+            android:layout_margin="16dp"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:onClick="@{()->viewModel.calculate()}"
+            android:text="@string/calculate"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/display"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/calculate"
+            android:layout_margin="16dp"
             android:layout_marginStart="16dp"
-            android:text="@string/person2"
-            android:textColor="@color/colorRed"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/person2amount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:autofillHints="1234"
-            android:ems="10"
-            android:inputType="number"
-            tools:ignore="LabelFor" />
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/calculate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/person2"
-        android:layout_margin="16dp"
-        android:foregroundGravity="center"
-        android:gravity="center"
-        android:text="@string/calculate"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/display"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/calculate"
-        android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
-        android:gravity="center"
-        android:maxLines="2"
-        android:text="@string/amount1more"
-        android:textColor="@color/colorBrown"
-        android:textSize="24sp" />
-</RelativeLayout>
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/amount1more"
+            android:textColor="@color/colorBrown"
+            android:textSize="24sp" />
+    </RelativeLayout>
+</layout>
