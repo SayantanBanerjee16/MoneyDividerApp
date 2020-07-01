@@ -105,7 +105,7 @@
             android:layout_margin="8dp"
             android:gravity="center"
             android:maxLines="2"
-            android:text="@string/amount1more"
+            android:text="@string/initial"
             android:textColor="@color/colorBrown"
             android:textSize="24sp" />
     </RelativeLayout>

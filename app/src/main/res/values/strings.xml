@@ -6,4 +6,5 @@
     <string name="amount1more">Person 1 pays Person 2 an amount :</string>
     <string name="amount2more">Person 2 pays Person 1 an amount :</string>
     <string name="amountEqual">Both amount are equal</string>
+    <string name="initial">Result will be displayed here</string>
 </resources>
