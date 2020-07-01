@@ -13,8 +13,10 @@ The key functionality of this Android App is to take input prices from two diffe
  <img src="screenshots/1.jpg" width="200" height ="400"> 
 
 * This screenshots are result when View model, Live data and Data Binding **IS NOT** being used. Notice in the second picture, the text view is re-created with initial data and calculated data is gone.
+
  <img src="screenshots/2.jpg" width="200" height ="400"> <img src="screenshots/3.jpg" width="400" height ="200">
 
 * This screenshots are result when View model, Live data and Data Binding **IS** being used. Notice in the second picture, the text view is still holding the caluclated data.
+
  <img src="screenshots/4.jpg" width="200" height ="400"> <img src="screenshots/5.jpg" width="400" height ="200">
 
