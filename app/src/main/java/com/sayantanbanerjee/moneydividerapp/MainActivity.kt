@@ -2,13 +2,10 @@ package com.sayantanbanerjee.moneydividerapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.sayantanbanerjee.moneydividerapp.databinding.ActivityMainBinding
 import kotlin.math.absoluteValue
 
@@ -22,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-        binding.viewModel = viewModel
+        viewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
         binding.lifecycleOwner = this
+        binding.viewModel = viewModel
 
         viewModel.noValueToast.observe(this, Observer {
             Toast.makeText(this, "No field should remain empty", Toast.LENGTH_SHORT).show()

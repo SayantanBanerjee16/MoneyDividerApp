@@ -50,7 +50,7 @@
                 android:autofillHints="1234"
                 android:ems="10"
                 android:inputType="number"
-                android:text="@{viewModel.amountPerson1}" />
+                android:text="@={viewModel.amountPerson1}" />
 
         </LinearLayout>
 
@@ -79,7 +79,7 @@
                 android:autofillHints="1234"
                 android:ems="10"
                 android:inputType="number"
-                android:text="@{viewModel.amountPerson2}"
+                android:text="@={viewModel.amountPerson2}"
                 tools:ignore="LabelFor" />
 
         </LinearLayout>

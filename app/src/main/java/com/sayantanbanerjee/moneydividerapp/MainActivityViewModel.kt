@@ -1,10 +1,12 @@
 package com.sayantanbanerjee.moneydividerapp
 
+import androidx.databinding.Bindable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel : ViewModel() {
+
     val amountPerson1 = MutableLiveData<String>()
     val amountPerson2 = MutableLiveData<String>()
 
