@@ -18,11 +18,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // activity data binding
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        // declaring view model
         viewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
+        // as live data is used, lifecycle owner must be set
         binding.lifecycleOwner = this
+        // binding view model
         binding.viewModel = viewModel
 
+        //observing view model public live data members. Any change is directly noticed here
         viewModel.noValueToast.observe(this, Observer {
             Toast.makeText(this, "No field should remain empty", Toast.LENGTH_SHORT).show()
         })
