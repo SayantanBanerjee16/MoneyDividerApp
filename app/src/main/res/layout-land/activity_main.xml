@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:padding="16dp"
+        android:padding="8dp"
         android:text="@string/app_name"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="36sp" />
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/heading"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         android:orientation="horizontal">
 
         <TextView
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/person1"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         android:orientation="horizontal">
 
         <TextView
@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/person2"
-        android:layout_margin="16dp"
+        android:layout_margin="8dp"
         android:foregroundGravity="center"
         android:gravity="center"
         android:text="@string/calculate"
@@ -90,8 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/calculate"
-        android:layout_margin="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_margin="8dp"
         android:gravity="center"
         android:maxLines="2"
         android:text="@string/amount1more"

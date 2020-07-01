@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity() {
                     display.text = getString(R.string.amountEqual)
                 } else if (amount1 > amount2) {
                     val diff = amount1.toInt() - amount2.toInt()
-                    display.text = getString(R.string.amount1more) + diff.toString()
+                    display.text = getString(R.string.amount1more) + " " + diff.toString()
                 } else {
                     val diff = amount2.toInt() - amount1.toInt()
-                    display.text = getString(R.string.amount2more) + diff.toString()
+                    display.text = getString(R.string.amount2more) + " " + diff.toString()
                 }
             }
         }

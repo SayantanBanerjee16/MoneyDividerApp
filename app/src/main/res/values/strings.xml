@@ -4,6 +4,6 @@
     <string name="person2">Enter Person 2 amount paid :</string>
     <string name="calculate">Calculate</string>
     <string name="amount1more">Person 1 pays Person 2 an amount :</string>
-    <string name="amount2more">Enter Person 2 pays Person 2 an amount :</string>
+    <string name="amount2more">Person 2 pays Person 1 an amount :</string>
     <string name="amountEqual">Both amount are equal</string>
 </resources>
