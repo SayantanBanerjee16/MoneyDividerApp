@@ -1,6 +1,6 @@
 # Money Divider App
 ## Description
-The key functionality of this Android App is to take input prices from two different users and then show the difference as result.
+The key functionality of this Android App is to take input prices from two different users and then display the amount one needs to pay the other such that both pays an equal amount in the end.
 
 ## Concept used
 
@@ -17,4 +17,6 @@ The key functionality of this Android App is to take input prices from two diffe
 
 * This screenshots are result when View model, Live data and Data Binding **IS** being used. Notice in the second picture, the text view is still holding the caluclated data.
  <img src="screenshots/4.jpg" width="200" height ="400"> <img src="screenshots/5.jpg" width="400" height ="200">
+
+* Note that:- The Edit Text were able to return the value as they were set with the same ID, thus it could automatically save an instance of the state while configuration change.
 
