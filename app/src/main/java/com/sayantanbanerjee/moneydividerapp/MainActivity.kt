@@ -33,12 +33,12 @@ class MainActivity : AppCompatActivity() {
         })
 
         viewModel.difference.observe(this , Observer {
-            if(it == 0){
+            if(it == 0.0){
                 binding.display.text = getString(R.string.amountEqual)
             }else if(it > 0){
-                binding.display.text = getString(R.string.amount1more) + " " + it.toString()
+                binding.display.text = getString(R.string.amount2more) + " " + it.toString()
             }else{
-                binding.display.text = getString(R.string.amount2more) + " " + it.absoluteValue.toString()
+                binding.display.text = getString(R.string.amount1more) + " " + it.absoluteValue.toString()
             }
         })
     }

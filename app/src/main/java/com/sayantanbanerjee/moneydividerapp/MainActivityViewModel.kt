@@ -16,8 +16,8 @@ class MainActivityViewModel : ViewModel() {
     val noValueToast: LiveData<String>
         get() = noValue
 
-    private var diff = MutableLiveData<Int>()
-    val difference: LiveData<Int>
+    private var diff = MutableLiveData<Double>()
+    val difference: LiveData<Double>
         get() = diff
 
     //this method is directly called from the button onClick
@@ -25,7 +25,7 @@ class MainActivityViewModel : ViewModel() {
         if (amountPerson1.value == "" || amountPerson2.value == "") {
             noValue.value = "NONE"
         } else {
-             diff.value = amountPerson1.value!!.toInt().minus(amountPerson2.value!!.toInt())
+             diff.value = (amountPerson1.value!!.toDouble().minus(amountPerson2.value!!.toDouble())).div(2)
         }
     }
 }
